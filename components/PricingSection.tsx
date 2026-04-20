@@ -18,7 +18,7 @@ export default function PricingSection() {
             <p className="text-sm font-semibold text-gray-900">{tier}</p>
             <p className="mt-2 text-3xl font-semibold text-gray-900">—</p>
             <p className="mt-3 text-sm text-gray-600">
-              Add your tier details here.
+              Tier details here.
             </p>
             <button
               type="button"

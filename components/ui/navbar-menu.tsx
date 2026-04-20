@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "motion/react";
-
-
+import { cn } from "@/lib/utils";
 
 const transition = {
   type: "spring",
@@ -18,13 +17,14 @@ export const MenuItem = ({
   active,
   item,
   href,
- 
+  className,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   href: string;
   children?: React.ReactNode;
+  className?: string;
 }) => {
   return (
     <a
@@ -34,7 +34,10 @@ export const MenuItem = ({
     >
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
+        className={cn(
+          "cursor-pointer text-slate-800 hover:opacity-90 dark:text-white",
+          className,
+        )}
       >
         {item}
       </motion.p>
@@ -45,14 +48,19 @@ export const MenuItem = ({
 export const Menu = ({
   setActive,
   children,
+  className,
 }: {
   setActive: (item: string | null) => void;
   children: React.ReactNode;
+  className?: string;
 }) => {
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6 "
+      className={cn(
+        "relative flex justify-center space-x-4 rounded-full border border-transparent bg-white px-8 py-6 shadow-input dark:border-white/[0.2] dark:bg-black",
+        className,
+      )}
     >
       {children}
     </nav>

@@ -3,8 +3,8 @@ import Link from "next/link";
 const productLinks = [
   { label: "Overview", href: "#" },
   { label: "Features", href: "#features" },
-  { label: "Integrations", href: "#integrations" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Integrations", href: "/Integrations" },
+  { label: "Pricing", href: "/pricing" },
 ];
 
 const companyLinks = [
@@ -15,8 +15,8 @@ const companyLinks = [
 ];
 
 const resourceLinks = [
-  { label: "Blog & Articles", href: "#" },
-  { label: "Documentation", href: "#" },
+  // { label: "Blog & Articles", href: "#" },
+  // { label: "Documentation", href: "#" },
   { label: "Contact", href: "#contact" },
   { label: "Status", href: "#" },
 ];

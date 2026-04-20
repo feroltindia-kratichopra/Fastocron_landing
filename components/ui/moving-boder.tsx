@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import {
   motion,
   useAnimationFrame,
@@ -18,6 +18,7 @@ export function Button({
   borderClassName,
   duration,
   className,
+  magnetic = true,
   ...otherProps
 }: {
   borderRadius?: string;
@@ -27,18 +28,43 @@ export function Button({
   borderClassName?: string;
   duration?: number;
   className?: string;
+  magnetic?: boolean;
   [key: string]: any;
 }) {
+  const [mag, setMag] = useState({ x: 0, y: 0 });
+  const {
+    onMouseMove: onMouseMoveProp,
+    onMouseLeave: onMouseLeaveProp,
+    ...restProps
+  } = otherProps;
+
+  function onMouseMove(e: React.MouseEvent<HTMLElement>) {
+    onMouseMoveProp?.(e);
+    if (!magnetic) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const mx = e.clientX - rect.left - rect.width / 2;
+    const my = e.clientY - rect.top - rect.height / 2;
+    setMag({ x: mx * 0.14, y: my * 0.14 });
+  }
+
+  function onMouseLeave(e: React.MouseEvent<HTMLElement>) {
+    onMouseLeaveProp?.(e);
+    setMag({ x: 0, y: 0 });
+  }
+
   return (
     <Component
       className={cn(
-        "relative h-16 w-40 overflow-hidden bg-transparent p-[1px] text-xl",
+        "group relative h-16 w-40 overflow-hidden bg-transparent p-[1px] text-xl transition-transform duration-200 will-change-transform hover:scale-[1.03]",
         containerClassName,
       )}
       style={{
         borderRadius: borderRadius,
+        transform: `translate3d(${mag.x}px,${mag.y}px,0)`,
       }}
-      {...otherProps}
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
+      {...restProps}
     >
       <div
         className="absolute inset-0"
@@ -56,7 +82,7 @@ export function Button({
 
       <div
         className={cn(
-          "relative flex h-full w-full items-center justify-center border border-slate-800 bg-slate-900/[0.8] text-sm text-white antialiased backdrop-blur-xl",
+          "relative flex h-full w-full items-center justify-center border border-white/10 bg-white/5 text-sm text-white antialiased backdrop-blur-xl transition-shadow duration-300 group-hover:border-cyan-500/40 group-hover:shadow-[0_0_36px_rgba(34,211,238,0.28)]",
           className,
         )}
         style={{

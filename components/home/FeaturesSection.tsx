@@ -53,27 +53,31 @@ export default function Features() {
   const renderFeatureCard = (feature: (typeof features)[number]) => (
     <div
       key={feature.title}
-      className="group rounded-xl  border-12 border-gray-200 bg-gradient-to-br from-gray-50 to-white p-7 transition-all duration-300 hover:-translate-y-1  hover:shadow-xl"
+      className="group rounded-xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-7 shadow-sm transition-all duration-300 [transform-style:preserve-3d] hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-500/10 md:hover:[transform:perspective(1000px)_rotateX(2deg)_scale(1.03)]"
     >
-      <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-400 to-cyan-600 shadow-lg shadow-blue-600/30 transition-shadow group-hover:shadow-blue-600/50">
+      <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400 to-indigo-600 shadow-lg shadow-cyan-600/25 transition-shadow group-hover:shadow-cyan-500/40">
         <feature.icon className="h-5 w-5 text-white" />
       </div>
       <div className="mb-3 flex items-start justify-between">
-        <h3 className="text-lg font-bold text-gray-900">{feature.title}</h3>
+        <h3 className="text-lg font-bold text-slate-900">{feature.title}</h3>
       </div>
-      <p className="text-md leading-relaxed text-gray-800">{feature.description}</p>
+      <p className="text-md leading-relaxed text-slate-700">{feature.description}</p>
     </div>
   );
 
   return (
-    <section id="features" className="bg-white py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <span className="text-blue-600 text-sm font-semibold uppercase tracking-widest">Platform Features</span>
-          <h2 className="text-5xl font-bold text-gray-900 mt-3 mb-4">
+    <section id="features" className="relative overflow-hidden bg-white pb-24">
+      <div className="pointer-events-none absolute -right-24 h-72 w-72 rounded-full bg-gradient-to-br from-cyan-400/15 to-indigo-500/15 blur-3xl" />
+      <div className="pointer-events-none absolute -left-20 bottom-10 h-64 w-64 rounded-full bg-violet-500/10 blur-3xl" />
+      <div className="relative z-10 mx-auto max-w-7xl px-6 [perspective:1200px]">
+        <div className="mb-16 text-center">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-600">
+            Platform Features
+          </span>
+          <h2 className="mt-3 text-4xl font-bold text-slate-900 md:text-5xl">
             Everything your team needs to win with data
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
             A complete intelligence layer for modern organizations — from ingestion to insight.
           </p>
         </div>
