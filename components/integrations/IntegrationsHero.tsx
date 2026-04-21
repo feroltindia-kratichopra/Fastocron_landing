@@ -112,7 +112,7 @@ export default function IntegrationsHero() {
             transition={{ delay: 0.22, duration: 0.45 }}
             className="mt-8 flex justify-center lg:justify-start"
           >
-            <Link href="#contact">
+            <Link href="/contact">
               <Button
                 borderRadius="1.75rem"
                 className="border border-white/10 bg-gradient-to-br from-cyan-600/30 to-indigo-900/40"

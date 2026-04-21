@@ -30,9 +30,16 @@ export default function HeroSection() {
           </span>
         </div>
 
-        <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-slate-1200 sm:text-5xl md:text-6xl">
+        {/* <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-slate-1200 sm:text-5xl md:text-6xl">
           Turn Your Raw Data into Actionable Insights—Without Compromising Privacy
-        </h1>
+        </h1> */}
+
+            <h1 className="max-w-4xl text-4xl font-semibold  tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
+            Turn Your Raw Data into Actionable Insights—{" "}
+              <span className="bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
+              Without Compromising Privacy
+              </span>
+            </h1>
         <p className="mt-6 max-w-xl text-lg text-slate-600">
           AI-powered analytics with zero data leakage. Connect any data source, ask
           questions in plain language, and get instant pivot tables, dashboards,
@@ -60,7 +67,8 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 rounded-t-[2.5rem] bg-gradient-to-t from-white/90 to-transparent" /> */}
+      {/* <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 rounded-t-[2.5rem] bg-gradient-to-b from-transparent to-sky-50/40" /> */}
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-sky-50/20 to-sky-50" />
     </section>
   );
 }

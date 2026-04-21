@@ -93,7 +93,7 @@ const rows = [
 
 export default function BeforeAfterSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white mt-30">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white  py-24">
       {/* Background Glow */}
       <div className="pointer-events-none absolute left-10 top-20 h-72 w-72 rounded-full bg-cyan-200/30 blur-3xl" />
       <div className="pointer-events-none absolute right-10 bottom-20 h-72 w-72 rounded-full bg-violet-200/30 blur-3xl" />

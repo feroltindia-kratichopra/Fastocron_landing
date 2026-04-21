@@ -13,7 +13,7 @@ intelligence with zero data leakage” for any business question.
 
 export default function About() {
   return (
-    <section id="about" className="bg-gray pb-24">
+    <section id="about" className="bg-gray py-24">
       <div className="max-w-7xl mx-auto px-6">
       <div className=" text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-600">

@@ -13,7 +13,7 @@ import BeforeAfterSection from "../components/home/before-after-section";
 import TestimonialsSection from "../components/home/testimonials-section";
 import SecurityMiniSection from "../components/home/security-mini-section";
 import ComparisonSection from "../components/home/comparison-section";
-import { SectionDivider } from "../components/home/section-divider";
+
 import Integrations from "@/components/home/Integrations";
 
 export default function Home() {
@@ -24,11 +24,9 @@ export default function Home() {
         <HeroSection />
         
         <LiveDemoSection />
-        {/* <div className="relative z-10 -mt-6 rounded-t-[2rem] bg-white shadow-[0_-12px_40px_-24px_rgba(0,0,0,0.35)]">
-          <LogoStrip />
-        </div> */}
+   
 
-        <SectionDivider variant="gradient-fade" />
+     
         <About />
         <Features />
         <StatsSection />
