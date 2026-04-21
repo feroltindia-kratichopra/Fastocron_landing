@@ -86,7 +86,7 @@ export default function FeatureCategoryTabs() {
               className={cn(
                 "rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300",
                 active === tab.id
-                  ? "bg-slate-900 text-white shadow-lg"
+                  ? "bg-sky-600 text-white shadow-lg shadow-sky-500/25"
                   : "bg-slate-100 text-slate-700 hover:bg-slate-200"
               )}
             >

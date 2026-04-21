@@ -77,7 +77,7 @@ function PostgresCard() {
         Connect operational databases securely and analyze production data live.
       </p>
 
-      <div className="mt-4 rounded-xl bg-slate-950 p-3 font-mono text-[10px] text-sky-100">
+      <div className="mt-4 rounded-xl border border-slate-200 bg-slate-100 p-3 font-mono text-[10px] text-slate-800">
         {lines.map((line, i) => (
           <motion.div
             key={line}

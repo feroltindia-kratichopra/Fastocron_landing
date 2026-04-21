@@ -18,40 +18,41 @@ export default function HeroSection() {
   return (
     <section
       onMouseMove={onMouseMove}
-      className="relative overflow-hidden bg-[#050816] px-6 pb-24 pt-32 text-center text-white md:pt-36"
+      className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-sky-50/40 px-6 pb-24 pt-32 text-center md:pt-36"
     >
       <HeroEffects mouseX={mouseX} mouseY={mouseY} />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center">
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-white/5 px-4 py-1.5 backdrop-blur">
-          <span className="h-2 w-2 animate-pulse rounded-full bg-white" />
-          <span className="text-xs uppercase tracking-wider text-white">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-white/80 px-4 py-1.5 shadow-sm backdrop-blur">
+          <span className="h-2 w-2 animate-pulse rounded-full bg-cyan-500" />
+          <span className="text-xs uppercase tracking-wider font-semibold text-cyan-800">
             AI-Powered Data Intelligence
           </span>
         </div>
 
-        <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-white/90 sm:text-5xl md:text-6xl">
+        <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-slate-1200 sm:text-5xl md:text-6xl">
           Turn Your Raw Data into Actionable Insights—Without Compromising Privacy
         </h1>
-        <p className="mt-6 max-w-xl text-lg text-slate-300">
+        <p className="mt-6 max-w-xl text-lg text-slate-600">
           AI-powered analytics with zero data leakage. Connect any data source, ask
           questions in plain language, and get instant pivot tables, dashboards,
           and insights—without exposing your sensitive data.
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Link href="#contact">
+          <a href="https://dev.fastocron.com/signin" target="_blank"
+                  rel="noopener noreferrer">
             <Button
               borderRadius="1.75rem"
-              className="border border-white/10 bg-gradient-to-br from-cyan-600/30 to-indigo-900/40 text-white"
+              className="border border-white/10 bg-gradient-to-br from-cyan-600/30 to-indigo-900/40 font-semibold"
             >
               Get Started
             </Button>
-          </Link>
+          </a>
           <Link href="#live-demo">
             <Button
               borderRadius="1.75rem"
-              className="border border-cyan-500/30 bg-white/10 text-white backdrop-blur"
+            className="border border-slate-200 bg-white font-semibold shadow-sm backdrop-blur"
             >
               Request a Demo
             </Button>
@@ -59,7 +60,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 rounded-t-[2.5rem] bg-gradient-to-t from-[#0B1120]/90 to-transparent" />
+      {/* <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 rounded-t-[2.5rem] bg-gradient-to-t from-white/90 to-transparent" /> */}
     </section>
   );
 }

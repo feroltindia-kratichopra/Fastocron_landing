@@ -76,12 +76,10 @@ export default function FeaturesUseCases() {
   return (
     <section className="border-t border-slate-200 bg-slate-50 py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-center text-2xl font-bold text-slate-900 sm:text-3xl">
+        <h2 className="text-center mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
           Built for your teams
         </h2>
-        <p className="mx-auto mt-3 max-w-xl text-center text-sm text-slate-600">
-          Hover to tilt — subtle depth without gimmicks.
-        </p>
+       
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {cases.map((c) => (

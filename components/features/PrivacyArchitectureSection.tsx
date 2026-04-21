@@ -33,7 +33,7 @@ export default function PrivacyArchitectureSection() {
   );
 
   return (
-    <section ref={ref} className="bg-slate-950 py-20 text-white sm:py-24">
+    <section ref={ref} className="bg-slate-50 py-20 text-slate-900 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Heading */}
         <motion.div
@@ -43,7 +43,7 @@ export default function PrivacyArchitectureSection() {
           transition={{ duration: 0.5 }}
           className="max-w-2xl"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700">
             Privacy-first
           </p>
 
@@ -51,7 +51,7 @@ export default function PrivacyArchitectureSection() {
             Your Data Never Leaves Your Control
           </h2>
 
-          <p className="mt-4 text-sm leading-relaxed text-slate-300 sm:text-base">
+          <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
             Unlike traditional AI tools, Fastocron only processes query outputs
             — not raw databases.
           </p>
@@ -71,9 +71,9 @@ export default function PrivacyArchitectureSection() {
                   delay: 0.08 + i * 0.06,
                   duration: 0.4,
                 }}
-                className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-200 backdrop-blur"
+                className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700 shadow-sm backdrop-blur"
               >
-                <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-400" />
+                <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-500 animate-pulse" />
                 <span>{b}</span>
               </motion.li>
             ))}
@@ -87,13 +87,13 @@ export default function PrivacyArchitectureSection() {
             >
               {/* DB */}
               <div className="flex flex-col items-center gap-2 text-center">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-500/10 ring-1 ring-sky-400/20 sm:h-16 sm:w-16">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 ring-1 ring-sky-200 sm:h-16 sm:w-16">
                   <Database
-                    className="h-7 w-7 text-sky-400 sm:h-8 sm:w-8"
+                    className="h-7 w-7 text-sky-600 sm:h-8 sm:w-8"
                     aria-hidden
                   />
                 </div>
-                <span className="text-xs text-slate-400">Database</span>
+                <span className="text-xs text-slate-500">Database</span>
               </div>
 
               {/* Line */}
@@ -104,13 +104,13 @@ export default function PrivacyArchitectureSection() {
                 style={{ scale: shieldScale }}
                 className="flex flex-col items-center gap-2 text-center"
               >
-                <div className="flex h-18 w-18 items-center justify-center rounded-2xl border-2 border-emerald-400/60 bg-emerald-500/10 shadow-[0_0_40px_-8px_rgba(52,211,153,0.45)] sm:h-20 sm:w-20">
+                <div className="flex h-18 w-18 items-center justify-center rounded-2xl border-2 border-emerald-300 bg-emerald-50 shadow-md shadow-emerald-500/15 sm:h-20 sm:w-20">
                   <Shield
-                    className="h-8 w-8 text-emerald-400 sm:h-10 sm:w-10"
+                    className="h-8 w-8 text-emerald-600 sm:h-10 sm:w-10"
                     aria-hidden
                   />
                 </div>
-                <span className="text-xs text-slate-400">Shield</span>
+                <span className="text-xs text-slate-500">Shield</span>
               </motion.div>
 
               {/* Line */}
@@ -118,13 +118,13 @@ export default function PrivacyArchitectureSection() {
 
               {/* AI */}
               <div className="flex flex-col items-center gap-2 text-center">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-500/10 ring-1 ring-sky-400/20 sm:h-16 sm:w-16">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 ring-1 ring-sky-200 sm:h-16 sm:w-16">
                   <Bot
-                    className="h-7 w-7 text-sky-300 sm:h-8 sm:w-8"
+                    className="h-7 w-7 text-sky-600 sm:h-8 sm:w-8"
                     aria-hidden
                   />
                 </div>
-                <span className="text-xs text-slate-400">AI</span>
+                <span className="text-xs text-slate-500">AI</span>
               </div>
             </motion.div>
           </div>

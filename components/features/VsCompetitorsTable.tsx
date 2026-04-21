@@ -44,9 +44,9 @@ export default function VsCompetitorsTable() {
         <div className="mt-12 overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
           <table className="w-full border-collapse text-left text-sm">
             <thead>
-              <tr className="border-b border-slate-200 bg-slate-950 text-white">
+              <tr className="border-b border-slate-200 bg-slate-100 text-slate-900">
                 <th className="px-4 py-4 font-semibold">Feature</th>
-                <th className="px-4 py-4 font-semibold text-sky-300">Fastocron</th>
+                <th className="px-4 py-4 font-semibold text-sky-700">Fastocron</th>
                 <th className="px-4 py-4 font-semibold">Power BI</th>
                 <th className="px-4 py-4 font-semibold">Tableau</th>
               </tr>

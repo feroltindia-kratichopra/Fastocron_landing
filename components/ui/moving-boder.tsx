@@ -82,7 +82,7 @@ export function Button({
 
       <div
         className={cn(
-          "relative flex h-full w-full items-center justify-center border border-white/10 bg-white/5 text-sm text-white antialiased backdrop-blur-xl transition-shadow duration-300 group-hover:border-cyan-500/40 group-hover:shadow-[0_0_36px_rgba(34,211,238,0.28)]",
+          "relative flex h-full w-full items-center justify-center border border-slate-200/90 bg-white text-sm text-slate-900 antialiased shadow-sm backdrop-blur-xl transition-shadow duration-300 group-hover:border-cyan-500/45 group-hover:shadow-[0_0_28px_rgba(34,211,238,0.2)]",
           className,
         )}
         style={{

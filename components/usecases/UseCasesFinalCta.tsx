@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
+import { Button } from "../ui/moving-boder";
 
 const placeholder = "Show top performing products this month...";
 
@@ -69,18 +70,25 @@ export default function UseCasesFinalCta() {
 
             {/* CTA Buttons */}
             <div className="mt-10 flex flex-wrap justify-center gap-3">
-              <Link
-                href="/#contact"
-                className="inline-flex h-12 min-w-[140px] items-center justify-center rounded-full bg-sky-500 px-8 text-sm font-semibold text-slate-950 transition hover:bg-sky-400"
+              <Link href="/contact">
+              <Button
+                borderRadius="1.75rem"
+                className="border border-white/10 bg-gradient-to-br from-cyan-600/30 to-indigo-900/40 text-white"
               >
-                Book Demo
+                Book a Demo
+              </Button>
               </Link>
+             
+           
 
               <Link
                 href="/features#live-demo"
-                className="inline-flex h-12 min-w-[170px] items-center justify-center rounded-full border border-white/25 bg-white/5 px-8 text-sm font-semibold text-white backdrop-blur transition hover:border-emerald-400/50 hover:bg-white/10"
               >
-                Try Live Demo
+                <Button
+                borderRadius="1.75rem"
+                className="border border-white/10 bg-gradient-to-br from-cyan-600/30 to-indigo-900/40 text-white"
+              >
+                Try Live Demo</Button>
               </Link>
             </div>
           </div>

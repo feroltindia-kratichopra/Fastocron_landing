@@ -21,9 +21,9 @@ export default function UseCasesBeforeAfter() {
         </p>
 
         <div className="mt-12 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl">
-          <div className="grid grid-cols-2 border-b border-slate-200 bg-gradient-to-r from-slate-800 to-sky-800 px-4 py-3 text-sm font-bold text-white">
+          <div className="grid grid-cols-2 border-b border-slate-200 bg-gradient-to-r from-slate-100 to-sky-100 px-4 py-3 text-sm font-bold text-slate-800">
             <span>Without Fastocron</span>
-            <span className="text-right text-sky-100">With Fastocron</span>
+            <span className="text-right text-sky-800">With Fastocron</span>
           </div>
           {rows.map((row, i) => (
             <div

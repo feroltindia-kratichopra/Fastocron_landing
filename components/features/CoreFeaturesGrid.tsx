@@ -26,13 +26,13 @@ function TypingCard() {
   }, []);
 
   return (
-    <div className="rounded-xl border border-slate-200 bg-slate-950 p-4 text-left">
-      <p className="text-[10px] font-semibold uppercase tracking-wider text-sky-400">
+    <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-left">
+      <p className="text-[10px] font-semibold uppercase tracking-wider text-sky-600">
         Natural language
       </p>
-      <p className="mt-2 min-h-[3rem] font-mono text-xs text-sky-100">
+      <p className="mt-2 min-h-[3rem] font-mono text-xs text-slate-800">
         {text}
-        <span className="animate-pulse text-sky-400">|</span>
+        <span className="animate-pulse text-sky-600">|</span>
       </p>
       <div className="mt-3 flex gap-2">
         <span className="h-8 flex-1 rounded bg-sky-500/20" />
@@ -90,7 +90,7 @@ function SlidingRowsCard() {
 function OrbitingConnectorsCard() {
   const icons = [Unplug, FileSpreadsheet, BarChart3, LayoutGrid];
   return (
-    <div className="relative flex h-40 items-center justify-center rounded-xl border border-slate-200 bg-slate-950">
+    <div className="relative flex h-40 items-center justify-center rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100">
       <motion.div
         className="absolute inset-0 flex items-center justify-center"
         animate={{ rotate: 360 }}
@@ -104,7 +104,7 @@ function OrbitingConnectorsCard() {
           return (
             <span
               key={i}
-              className="absolute flex h-9 w-9 items-center justify-center rounded-full border border-sky-500/40 bg-slate-900 text-sky-300"
+              className="absolute flex h-9 w-9 items-center justify-center rounded-full border border-sky-300 bg-white text-sky-600 shadow-sm"
               style={{ transform: `translate(${x}px, ${y}px)` }}
             >
               <Icon className="h-4 w-4" aria-hidden />

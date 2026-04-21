@@ -15,7 +15,6 @@ export default function Navbar() {
     { label: "Features", href: "/features" },
     { label: "Application", href: "/useCases" },
     { label: "Integrations", href: "/Integrations" },
-    // { label: "Pricing", href: "/pricing" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -23,11 +22,11 @@ export default function Navbar() {
     <div className="fixed left-0 right-0 top-0 z-50">
       <header className="w-full">
         {/* DESKTOP NAVBAR */}
-        <nav className="hidden w-full items-center justify-between border-b border-white/10 bg-[#0B1120]/80 px-6 py-3 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.5)] backdrop-blur-xl lg:flex">
+        <nav className="hidden w-full items-center justify-between border-b border-slate-200/80 bg-white/85 px-6 py-3 shadow-sm shadow-slate-200/50 backdrop-blur-xl lg:flex">
           {/* Logo */}
           <Link
             href="/"
-            className="text-lg font-bold tracking-tight bg-gradient-to-r from-cyan-300 to-indigo-300 bg-clip-text text-transparent"
+            className="text-lg font-bold tracking-tight bg-gradient-to-r from-cyan-600 to-indigo-600 bg-clip-text text-transparent"
           >
             FastOcron
           </Link>
@@ -36,7 +35,7 @@ export default function Navbar() {
           <div className="flex flex-1 justify-center">
             <Menu
               setActive={setActive}
-              className=" bg-[#0B1120]/80 py-4 text-slate-300 shadow-none "
+              className="border border-slate-200/90 bg-white/95 py-4 text-slate-700 shadow-sm"
             >
               {navlink.map((link) => (
                 <MenuItem
@@ -45,30 +44,35 @@ export default function Navbar() {
                   setActive={setActive}
                   active={active}
                   href={link.href}
-                  className="text-slate-300 hover:text-white"
+                  className="text-slate-600 hover:text-slate-900 !font-semibold"
                 />
               ))}
             </Menu>
           </div>
 
           {/* CTA */}
-          <button className="rounded-full border border-cyan-500/30 bg-gradient-to-r from-cyan-500/20 to-indigo-600/20 px-5 py-2 text-sm font-medium text-white transition hover:scale-[1.02]">
+          <a
+            href="https://dev.fastocron.com/signin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-cyan-500/35 bg-gradient-to-r from-cyan-500/15 to-indigo-500/15 px-5 py-2 text-sm font-medium text-slate-800 transition hover:scale-[1.02]"
+          >
             Sign in
-          </button>
+          </a>
         </nav>
 
         {/* MOBILE NAVBAR */}
-        <nav className="flex items-center justify-between border-b border-white/10 bg-[#0B1120]/85 px-4 py-4 backdrop-blur-xl lg:hidden">
+        <nav className="flex items-center justify-between border-b border-slate-200/80 bg-white/90 px-4 py-4 shadow-sm backdrop-blur-xl lg:hidden">
           <Link
             href="/"
-            className="text-lg font-bold tracking-tight bg-gradient-to-r from-cyan-300 to-indigo-300 bg-clip-text text-transparent"
+            className="text-lg font-bold tracking-tight bg-gradient-to-r from-cyan-600 to-indigo-600 bg-clip-text text-transparent"
           >
             FastOcron
           </Link>
 
           <button
             onClick={() => setOpen(true)}
-            className="rounded-xl border border-white/10 bg-white/5 p-2 text-white"
+            className="rounded-xl border border-slate-200 bg-slate-50 p-2 text-slate-800"
           >
             <MenuIcon className="h-5 w-5" />
           </button>
@@ -84,7 +88,7 @@ export default function Navbar() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={() => setOpen(false)}
-                className="fixed inset-0 bg-black/50 backdrop-blur-sm lg:hidden"
+                className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden"
               />
 
               {/* Sidebar */}
@@ -93,24 +97,24 @@ export default function Navbar() {
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="fixed right-0 top-0 h-screen w-[82%] max-w-sm border-l border-white/10 bg-[#0B1120] p-6 shadow-2xl lg:hidden"
+                className="fixed right-0 top-0 z-50 flex h-screen w-[82%] max-w-sm flex-col border-l border-slate-200 bg-white p-6 shadow-2xl lg:hidden"
               >
                 {/* Top */}
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold bg-gradient-to-r from-cyan-300 to-indigo-300 bg-clip-text text-transparent">
+                  <span className="text-lg font-bold bg-gradient-to-r from-cyan-600 to-indigo-600 bg-clip-text text-transparent">
                     FastOcron
                   </span>
 
                   <button
                     onClick={() => setOpen(false)}
-                    className="rounded-xl border border-white/10 bg-white/5 p-2 text-white"
+                    className="rounded-xl border border-slate-200 bg-slate-50 p-2 text-slate-800"
                   >
                     <X className="h-5 w-5" />
                   </button>
                 </div>
 
                 {/* Links */}
-                <div className="mt-10 space-y-3">
+                <div className="mt-10 flex-1 space-y-3 overflow-y-auto">
                   {navlink.map((link, i) => (
                     <motion.div
                       key={link.label}
@@ -121,7 +125,7 @@ export default function Navbar() {
                       <Link
                         href={link.href}
                         onClick={() => setOpen(false)}
-                        className="block rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-white/10 hover:text-white"
+                        className="block rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm !font-bold text-slate-700 transition hover:bg-slate-100 hover:text-slate-900"
                       >
                         {link.label}
                       </Link>
@@ -130,16 +134,17 @@ export default function Navbar() {
                 </div>
 
                 {/* CTA */}
-                <div className="mt-8">
-                <Link
-                  href="https://dev.fastocron.com/signin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full rounded-full bg-gradient-to-r from-cyan-400 to-indigo-500 px-5 py-3 text-center text-sm font-semibold text-slate-950"
-                >
-                  Sign in
-                </Link>
-              </div>
+                <div className="mt-6">
+                  <a
+                    href="https://dev.fastocron.com/signin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setOpen(false)}
+                    className="block w-full rounded-full bg-gradient-to-r from-cyan-400 to-indigo-500 px-5 py-3 text-center text-sm font-semibold text-slate-950"
+                  >
+                    Sign in
+                  </a>
+                </div>
               </motion.div>
             </>
           )}

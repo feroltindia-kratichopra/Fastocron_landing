@@ -29,18 +29,15 @@ export default function LiveDemoPreview() {
   }, [phase]);
 
   return (
-    <section id="live-demo" className="scroll-mt-28 bg-slate-950 py-24 text-white">
+    <section id="live-demo" className="scroll-mt-28 bg-slate-50 py-24 text-slate-900">
       <div className="mx-auto max-w-6xl px-6">
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-sky-400">
+        <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
           Live demo preview
         </p>
-        <h2 className="mt-3 text-center text-2xl font-bold sm:text-3xl">
+        <h2 className="mt-3 text-center text-2xl font-bold text-slate-900 sm:text-3xl">
           See the assistant respond in context
         </h2>
-        <p className="mx-auto mt-3 max-w-lg text-center text-sm text-slate-400">
-          Typing animation, then a compact chart mock — optimized for conversion above the fold on
-          longer pages.
-        </p>
+      
 
         <div className="mx-auto mt-12 max-w-3xl overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 shadow-2xl backdrop-blur">
           <div className="border-b border-white/10 px-4 py-3 text-xs text-slate-400">

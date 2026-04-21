@@ -36,7 +36,7 @@ export default function FeaturesHero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-slate-950 pt-28 pb-20 text-white lg:pt-32">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-slate-100/70 pt-28 pb-20 text-slate-900 lg:pt-32">
       {/* Particles */}
       {!reduce && (
         <div className="pointer-events-none absolute inset-0">
@@ -46,8 +46,8 @@ export default function FeaturesHero() {
               className="absolute h-1 w-1 rounded-full bg-sky-400/40"
               style={{ left: p.x, top: p.y }}
               animate={{
-                opacity: [0.15, 0.85, 0.15],
-                scale: [0.6, 1.4, 0.6],
+                opacity: [0.02 , 0.85, 0.05],
+                scale: [0.1, 1.4, 0.1],
                 y: [0, -18, 0],
               }}
               transition={{
@@ -72,12 +72,12 @@ export default function FeaturesHero() {
             animate={reduce ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.55 }}
           >
-            <p className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-sky-300">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-white" />
+            <p className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-sky-700">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-sky-500" />
               Features
             </p>
 
-            <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-[2.75rem]">
+            <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-[2.75rem]">
               Powerful AI Features Built for{" "}
               <span className="bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
                 Modern Businesses
@@ -89,7 +89,7 @@ export default function FeaturesHero() {
             initial={reduce ? false : { opacity: 0, y: 18 }}
             animate={reduce ? undefined : { opacity: 1, y: 0 }}
             transition={{ delay: 0.12, duration: 0.5 }}
-            className="mt-6 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg"
+            className="mt-6 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg"
           >
             From natural language analytics to live dashboards and privacy-first
             architecture — Fastocron helps teams turn data into decisions instantly.
@@ -101,10 +101,10 @@ export default function FeaturesHero() {
             transition={{ delay: 0.22, duration: 0.45 }}
             className="mt-8 flex flex-wrap gap-3"
           >
-            <Link href="#contact">
+            <Link href="/contact">
               <Button
                 borderRadius="1.75rem"
-                className="border border-white/10 bg-gradient-to-br from-cyan-600/30 to-indigo-900/40 text-white"
+                className="border border-white/10 bg-gradient-to-br from-cyan-600/30 to-indigo-900/40 "
               >
                 Book a Demo
               </Button>
@@ -113,7 +113,7 @@ export default function FeaturesHero() {
             <Link href="#live-demo">
               <Button
                 borderRadius="1.75rem"
-                className="border border-cyan-500/30 bg-white/10 text-white backdrop-blur"
+                className="border border-cyan-500/30 bg-white/10 "
               >
                 Try Live Demo
               </Button>
@@ -132,7 +132,7 @@ export default function FeaturesHero() {
           <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-sky-500/20 via-transparent to-emerald-500/20 blur-2xl" />
 
           {/* Responsive Card */}
-          <div className="relative overflow-hidden rounded-xl border border-white/10 bg-slate-900/80 shadow-2xl backdrop-blur">
+          <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl backdrop-blur">
             {/* IMPORTANT FIXED PART */}
             <div className="relative aspect-[16/10] w-full">
               {slides.map((src, i) => (
@@ -159,15 +159,15 @@ export default function FeaturesHero() {
             </div>
 
             {/* Dots */}
-            <div className="flex items-center justify-center gap-2 border-t border-white/10 bg-black/30 px-4 py-4">
+            <div className="flex items-center justify-center gap-2 border-t border-slate-200 bg-black/60 px-4 py-4">
               {slides.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setActive(i)}
                   className={`h-2.5 rounded-full transition-all ${
                     active === i
-                      ? "w-8 bg-sky-400"
-                      : "w-2.5 bg-white/30 hover:bg-white/50"
+                      ? "w-8 bg-sky-500"
+                      : "w-2.5 bg-slate-300 hover:bg-slate-400"
                   }`}
                 />
               ))}

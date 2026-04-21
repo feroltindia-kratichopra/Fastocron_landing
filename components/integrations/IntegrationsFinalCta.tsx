@@ -99,15 +99,15 @@ export default function IntegrationsFinalCta() {
 
             {/* Buttons */}
             <div className="mt-10 flex flex-wrap justify-center gap-3">
-              <Button>
-              <Link
-                href="/contact"
-                className="inline-flex h-12 min-w-[140px] items-center justify-center rounded-full bg-sky-500 px-8 text-sm font-semibold text-slate-950 transition "
+              <Link href="/contact">
+              <Button
+                borderRadius="1.75rem"
+                className="border border-white/10 bg-gradient-to-br from-cyan-600/30 to-indigo-900/40 text-white"
               >
-                Book Demo
-              </Link></Button>
-
-           
+                Book a Demo
+              </Button>
+              </Link>
+             
             </div>
           </div>
         </motion.div>

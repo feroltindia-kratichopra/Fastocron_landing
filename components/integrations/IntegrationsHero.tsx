@@ -47,7 +47,7 @@ export default function IntegrationsHero() {
   );
 
   return (
-    <section className="relative overflow-hidden bg-slate-950 pt-28 pb-20 text-white lg:pt-32">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-slate-100/70 pt-28 pb-20 text-slate-900 lg:pt-32">
       {/* Background */}
       {!reduce && (
         <div className="pointer-events-none absolute inset-0">
@@ -83,12 +83,12 @@ export default function IntegrationsHero() {
             animate={reduce ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.55 }}
           >
-            <p className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-sky-300">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-white" />
+            <p className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-sky-700">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-sky-500" />
               Integrations
             </p>
 
-            <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-[2.75rem]">
+            <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-[2.75rem]">
               Connect Fastocron With{" "}
               <span className="bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
                 Everything You Use
@@ -100,7 +100,7 @@ export default function IntegrationsHero() {
             initial={reduce ? false : { opacity: 0, y: 18 }}
             animate={reduce ? undefined : { opacity: 1, y: 0 }}
             transition={{ delay: 0.12, duration: 0.5 }}
-            className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg lg:mx-0"
+            className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg lg:mx-0"
           >
             Databases, CRMs, spreadsheets, ERPs, ad platforms, and custom APIs —
             all unified into one secure analytics workspace.
@@ -115,7 +115,7 @@ export default function IntegrationsHero() {
             <Link href="#contact">
               <Button
                 borderRadius="1.75rem"
-                className="border border-white/10 bg-gradient-to-br from-cyan-600/30 to-indigo-900/40 text-white"
+                className="border border-white/10 bg-gradient-to-br from-cyan-600/30 to-indigo-900/40"
               >
                 Book a Demo
               </Button>

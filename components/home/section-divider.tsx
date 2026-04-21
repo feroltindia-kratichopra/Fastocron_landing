@@ -20,9 +20,9 @@ export function SectionDivider({ variant }: { variant: DividerVariant }) {
   }
   if (variant === "light-to-dark") {
     return (
-      <div className="relative h-16 w-full shrink-0 bg-[#050816]">
+      <div className="relative h-16 w-full shrink-0 bg-slate-50">
         <svg
-          className="absolute -top-px left-0 h-16 w-full text-[#050816]"
+          className="absolute -top-px left-0 h-16 w-full text-slate-50"
           viewBox="0 0 1440 48"
           preserveAspectRatio="none"
           aria-hidden
