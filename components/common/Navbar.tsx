@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { MenuItem, Menu } from "../ui/navbar-menu";
 import { Menu as MenuIcon, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
@@ -22,20 +23,33 @@ export default function Navbar() {
     <div className="fixed left-0 right-0 top-0 z-50">
       <header className="w-full">
         {/* DESKTOP NAVBAR */}
-        <nav className="hidden w-full items-center justify-between border-b border-slate-200/80 bg-white/85 px-6 py-3 shadow-sm shadow-slate-200/50 backdrop-blur-xl lg:flex">
+        <nav className="hidden w-full items-center justify-between border-b border-slate-200/80 bg-white/85 px-20 py-3 shadow-sm shadow-slate-200/50 backdrop-blur-xl lg:flex">
           {/* Logo */}
+          <div className="flex items-center">
           <Link
             href="/"
-            className="text-lg font-bold tracking-tight bg-gradient-to-r from-cyan-600 to-indigo-600 bg-clip-text text-transparent"
+            className="inline-flex items-center text-lg font-bold tracking-tight bg-gradient-to-r from-cyan-600 to-indigo-600 bg-clip-text text-transparent"
           >
-            FastOcron
+           
+              <Image
+                src="/FastOcron_logo.png"   
+                alt="FastOcron Logo"
+                width={60}
+                height={60}
+                className="object-contain"
+              />
+         
+            <span>FastOcron</span>
+
+            
           </Link>
+        </div>
 
           {/* Center Menu */}
           <div className="flex flex-1 justify-center">
             <Menu
               setActive={setActive}
-              className="border border-slate-200/90 bg-white/95 py-4 text-slate-700 shadow-sm"
+              className="border border-slate-200/90 bg-gradient-to-b from-white via-slate-50 to-sky-50/40 py-4 text-slate-700 shadow-sm"
             >
               {navlink.map((link) => (
                 <MenuItem
@@ -63,12 +77,25 @@ export default function Navbar() {
 
         {/* MOBILE NAVBAR */}
         <nav className="flex items-center justify-between border-b border-slate-200/80 bg-white/90 px-4 py-4 shadow-sm backdrop-blur-xl lg:hidden">
+          <div className="flex items-center">
           <Link
             href="/"
-            className="text-lg font-bold tracking-tight bg-gradient-to-r from-cyan-600 to-indigo-600 bg-clip-text text-transparent"
+            className="inline-flex items-center text-lg font-bold tracking-tight bg-gradient-to-r from-cyan-600 to-indigo-600 bg-clip-text text-transparent"
           >
-            FastOcron
+           
+              <Image
+                src="/icon.png"   
+                alt="FastOcron Logo"
+                width={60}
+                height={60}
+                className="object-contain"
+              />
+         
+            <span>FastOcron</span>
+
+            
           </Link>
+        </div>
 
           <button
             onClick={() => setOpen(true)}

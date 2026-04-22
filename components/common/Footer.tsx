@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const productLinks = [
   { label: "Overview", href: "#" },
@@ -33,10 +34,14 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-12">
           <div className="grid gap-10 md:grid-cols-[1.1fr_1fr_1fr_1fr]">
             <div>
-              <div className="inline-flex items-center gap-3">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gray-900 text-xs font-bold text-white">
-                  FO
-                </span>
+              <div className="inline-flex items-center ">
+                <Image
+                src="/icon.png"   
+                alt="FastOcron Logo"
+                width={60}
+                height={60}
+                className="object-contain"
+              />
                 <p className="text-3xl font-semibold tracking-tight text-gray-900">
                   FastOcron
                 </p>
