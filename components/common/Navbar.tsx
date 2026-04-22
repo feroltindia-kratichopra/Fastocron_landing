@@ -84,7 +84,7 @@ export default function Navbar() {
           >
            
               <Image
-                src="\icon.png"   
+                src="/icon.png"   
                 alt="FastOcron Logo"
                 width={60}
                 height={60}
