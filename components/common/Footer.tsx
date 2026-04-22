@@ -36,7 +36,7 @@ export default function Footer() {
             <div>
               <div className="inline-flex items-center ">
                 <Image
-                src="/icon.png"   
+                src="\icon.png"   
                 alt="FastOcron Logo"
                 width={60}
                 height={60}
