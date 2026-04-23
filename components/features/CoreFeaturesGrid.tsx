@@ -11,6 +11,7 @@ import {
   Unplug,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const nlSample = "Show last month revenue by region";
 
@@ -112,8 +113,14 @@ function OrbitingConnectorsCard() {
           );
         })}
       </motion.div>
-      <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-500 to-emerald-500 text-sm font-black text-slate-950">
-        FC
+      <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-sky-500 text-sm font-black text-slate-950">
+        <Image
+          src="/icon.png"   
+          alt="FastOcron Logo"
+          width={30}
+          height={0}
+          className="block object-contain"
+        />
       </div>
     </div>
   );

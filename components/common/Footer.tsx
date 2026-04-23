@@ -42,9 +42,14 @@ export default function Footer() {
                 height={60}
                 className="object-contain"
               />
-                <p className="text-3xl font-semibold tracking-tight text-gray-900">
-                  FastOcron
-                </p>
+              <Image
+                src="/fastocron-1.png"   
+                alt="FastOcron Logo"
+                width={180}
+                height={70}
+                className="block object-contain "
+              />
+                
               </div>
               <p className="mt-4 max-w-xs text-md leading-relaxed text-gray-600">
                 AI analytics for modern teams. Connect any data source and get
@@ -75,10 +80,10 @@ export default function Footer() {
                   Get in touch
                 </p>
                 <a
-                  href="mailto:hello@fastocron.ai"
+                  href="mailto:contact@fastocron.com"
                   className="mt-3 block text-md font-medium text-gray-900 hover:underline"
                 >
-                  hello@fastocron.ai
+                  contact@fastocron.com
                 </a>
                 <div className="mt-4 flex items-center gap-2">
                   {socials.map((social) => (

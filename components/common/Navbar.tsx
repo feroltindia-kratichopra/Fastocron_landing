@@ -32,14 +32,20 @@ export default function Navbar() {
           >
            
               <Image
-                src="/FastOcron_logo.png"   
+                src="/icon.png"   
                 alt="FastOcron Logo"
-                width={60}
-                height={60}
-                className="object-contain"
+                width={40}
+                height={40}
+                className="block object-contain "
+              />
+              <Image
+                src="/fastocron-1.png"   
+                alt="FastOcron Logo"
+                width={180}
+                height={40}
+                className="block object-contain"
               />
          
-            <span>FastOcron</span>
 
             
           </Link>

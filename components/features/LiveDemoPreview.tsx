@@ -46,7 +46,12 @@ export default function LiveDemoPreview() {
           <div className="p-5 sm:p-6">
             
 
-          <video>
+          <video className="h-full w-full rounded-2xl object-cover md:object-left-top"
+              autoPlay
+              loop
+              muted
+              playsInline
+              draggable={false}>
             <source src="/MBInsights.mp4" type="video/mp4" />
           </video>
           </div>

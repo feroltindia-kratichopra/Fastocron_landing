@@ -178,10 +178,10 @@ export default function IntegrationsHero() {
                 className="relative flex h-20 w-20 sm:h-28 sm:w-28 items-center justify-center rounded-3xl bg-gradient-to-br from-sky-500 to-emerald-500 text-lg sm:text-xl font-black text-white shadow-[0_0_50px_-10px_rgba(14,165,233,0.55)]"
               >
                 <Image
-                src="/FastOcron_logo_white.png"   
+                src="/FastOcron_logo_white-1.png"   
                 alt="FastOcron Logo"
-                width={60}
-                height={60}
+                width={90}
+                height={80}
                 className="object-contain"
               />
                 <span className="absolute inset-0 rounded-3xl ring-2 ring-white/30" />

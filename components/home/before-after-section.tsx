@@ -69,6 +69,7 @@ import {
   AlertCircle,
   CheckCircle2,
 } from "lucide-react";
+import Image from "next/image";
 
 const rows = [
   {
@@ -213,12 +214,10 @@ export default function BeforeAfterSection() {
               }}
               className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-white border border-cyan-200 shadow-xl"
             >
-              <Sparkles className="h-7 w-7 text-cyan-600" />
+              <Image src="/icon.png" alt="FastOcron Logo" width={30} height={30} />
             </motion.div>
 
-            <p className="mt-4 text-center text-xs font-bold uppercase tracking-[0.2em] text-cyan-700">
-              Fastocron
-            </p>
+           <Image src="/fastocron-1.png" alt="FastOcron Logo" width={180} height={70} className="pt-5"/>
 
             {/* Flow dots */}
             <motion.div
