@@ -56,7 +56,7 @@ export default function HeroSection() {
               Get Started
             </Button>
           </a>
-          <Link href="#live-demo">
+          <Link href="/contact">
             <Button
               borderRadius="1.75rem"
             className="border border-slate-200 bg-white font-semibold shadow-sm backdrop-blur"

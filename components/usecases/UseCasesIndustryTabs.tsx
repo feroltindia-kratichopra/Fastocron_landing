@@ -13,7 +13,7 @@ const tabs = [
     ring: "ring-sky-300",
     headline: "Close the books faster — with governed AI.",
     body: "P&L, GST, and branch performance on demand. Fewer spreadsheets, fewer errors, faster audits.",
-    image: "/usecases/finance.png",
+    image: "/useCases/Finance.png",
   },
   {
     id: "sales",
@@ -58,7 +58,7 @@ const tabs = [
     ring: "ring-cyan-300",
     headline: "Client reporting that scales.",
     body: "Branded dashboards, recurring exports, and multi-workspace separation without manual glue work.",
-    image: "/usecases/agencies.png",
+    image: "/useCases/agencies.png",
   },
 ] as const;
 

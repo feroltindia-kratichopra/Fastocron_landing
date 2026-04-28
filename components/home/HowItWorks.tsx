@@ -43,7 +43,7 @@ export default function FeaturesHowItWorksTimeline() {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={ref} className="bg-white  py-20">
+    <section ref={ref} className="bg-white  py-20" id="how-it-works">
       <div className="mx-auto max-w-6xl px-6">
       <h2 className="text-center text-5xl font-bold text-gray-900 mt-3 mb-4">
             How Fastocron Works

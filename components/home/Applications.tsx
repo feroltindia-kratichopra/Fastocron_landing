@@ -69,7 +69,7 @@ const items = [
     description:
       "Generate Excel-style pivot tables directly from your data with a single chat command. Supports aggregation, grouping, and filtering.",
     header: (
-      <div className="relative h-full min-h-[5rem] w-full">
+      <div className="relative h-full min-h-[4rem] w-full">
         <Image
           src="/useCases/pivot.png"
           alt="Pivot tables"

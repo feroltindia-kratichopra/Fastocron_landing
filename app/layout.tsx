@@ -7,6 +7,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Fastocron - AI Powered Business Intelligence",
   description: "Fastocron is a platform that helps you analyze your data and get insights from it. It is powered by AI and can help you analyze your data and get insights from it.",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 const anticDidone = Antic_Didone({
   variable: "--font-antic-didone",

@@ -30,7 +30,7 @@ export default function ContactSection() {
     setStatus("sending");
     setFeedback("");
 
-    const apiUrl = process.env.NEXT_PUBLIC_CONTACT_API_URL !;
+    const apiUrl = "/api/contact";
 
     try {
       const response = await fetch(apiUrl, {

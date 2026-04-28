@@ -2,24 +2,24 @@ import Link from "next/link";
 import Image from "next/image";
 
 const productLinks = [
-  { label: "Overview", href: "#" },
-  { label: "Features", href: "#features" },
+  { label: "Overview", href: "/" },
+  { label: "Features", href: "/features" },
   { label: "Integrations", href: "/Integrations" },
   { label: "Pricing", href: "/pricing" },
 ];
 
 const companyLinks = [
-  { label: "About Us", href: "#about" },
-  { label: "How It Works", href: "#how-it-works" },
+  { label: "About Us", href: "/#about" },
+  { label: "How It Works", href: "/#how-it-works" },
   { label: "Applications", href: "#applications" },
-  { label: "Careers", href: "#" },
+  // { label: "Careers", href: "#" },
 ];
 
 const resourceLinks = [
   // { label: "Blog & Articles", href: "#" },
   // { label: "Documentation", href: "#" },
   { label: "Contact", href: "#contact" },
-  { label: "Status", href: "#" },
+  // { label: "Status", href: "#" },
 ];
 
 const socials = [
@@ -30,28 +30,24 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="mt-16 w-full bg-white">
+    <footer className=" w-full bg-white">
       <div className="mx-auto max-w-6xl px-6 py-12">
           <div className="grid gap-10 md:grid-cols-[1.1fr_1fr_1fr_1fr]">
             <div>
-              <div className="inline-flex items-center ">
-                <Image
-                src="/icon.png"   
-                alt="FastOcron Logo"
-                width={60}
-                height={60}
-                className="object-contain"
-              />
-              <Image
-                src="/fastocron-1.png"   
+              <div className="relative w-[180px] h-[80px] flex items-center ">
+             <Link href="/">
+              
+             <Image
+                src="/fastocron.png"   
                 alt="FastOcron Logo"
                 width={180}
-                height={70}
-                className="block object-contain "
+                height={20}
+                className=" object-contain "
               />
                 
+             </Link>
               </div>
-              <p className="mt-4 max-w-xs text-md leading-relaxed text-gray-600">
+              <p className=" max-w-xs text-md leading-relaxed text-gray-600">
                 AI analytics for modern teams. Connect any data source and get
                 instant insights with complete data privacy.
               </p>
@@ -104,10 +100,10 @@ export default function Footer() {
           <div className="mt-10 flex flex-col gap-4 border-t border-gray-200 pt-6 text-md text-gray-600 sm:flex-row sm:items-center sm:justify-between">
             <p>© 2026 FastOcron. All rights reserved.</p>
             <div className="flex items-center gap-6">
-              <Link href="#" className="hover:text-gray-900">
+              <Link href="/privacy" className="hover:text-gray-900">
                 Privacy Policy
               </Link>
-              <Link href="#" className="hover:text-gray-900">
+              <Link href="/terms" className="hover:text-gray-900">
                 Terms of Service
               </Link>
             </div>

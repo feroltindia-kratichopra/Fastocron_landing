@@ -23,36 +23,28 @@ export default function Navbar() {
     <div className="fixed left-0 right-0 top-0 z-50">
       <header className="w-full">
         {/* DESKTOP NAVBAR */}
-        <nav className="hidden w-full items-center justify-between border-b border-slate-200/80 bg-white/85 px-20 py-3 shadow-sm shadow-slate-200/50 backdrop-blur-xl lg:flex">
+        <nav className="relative hidden w-full items-center justify-between border-b border-slate-200/80 bg-white/85 px-15  shadow-sm shadow-slate-200/50 backdrop-blur-xl lg:flex">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center justify-center">
           <Link
             href="/"
-            className="inline-flex items-center text-lg font-bold tracking-tight bg-gradient-to-r from-cyan-600 to-indigo-600 bg-clip-text text-transparent"
+            className=" relative flex w-[350px] h-[80px] items-center text-lg  font-bold tracking-tight bg-gradient-to-r from-cyan-600 to-indigo-600 bg-clip-text text-transparent"
           >
-           
               <Image
-                src="/icon.png"   
-                alt="FastOcron Logo"
-                width={40}
-                height={40}
-                className="block object-contain "
-              />
-              <Image
-                src="/fastocron-1.png"   
+                src="/fastocron.png"   
                 alt="FastOcron Logo"
                 width={180}
-                height={40}
-                className="block object-contain"
+                height={20}
+                className="object-contain "
               />
-         
+           
 
             
           </Link>
         </div>
 
           {/* Center Menu */}
-          <div className="flex flex-1 justify-center">
+          <div className="flex flex-1 justify-center absolute left-1/2 -translate-x-1/2 ">
             <Menu
               setActive={setActive}
               className="border border-slate-200/90 bg-gradient-to-b from-white via-slate-50 to-sky-50/40 py-4 text-slate-700 shadow-sm"
